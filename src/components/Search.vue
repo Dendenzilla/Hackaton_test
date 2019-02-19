@@ -25,6 +25,8 @@ export default {
     font-family: "Roboto", sans-serif;
     color: white;
     text-align: left;
+    margin: 0;
+    padding-top: 150px;
 }
 .img-head {
     z-index: -2;
