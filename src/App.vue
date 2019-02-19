@@ -35,4 +35,19 @@ export default {
 body{
   margin: 0;
 }
+.container{
+  max-width: 1050px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1150px) {
+  .container{
+    max-width: 100vw;
+    padding: 0 6%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .container{
+    padding: 0 8%;
+  }
+}
 </style>

@@ -11,7 +11,7 @@
                     <img src="@/assets/img/app_store.png" alt="link_app_store">
                 </div>
             </div>
-            <div class="resto__menu">
+            <div class="resto__menu" v-sticky="{ zIndex: 10, stickyTop: 0, disabled: false}">
                 <RestoMenu/>
                 <div class="basket">
                     <div class="order">Passer commande</div>
@@ -131,16 +131,20 @@
 
 <script>
 // @ is an alias to /src
+import VueSticky from 'vue-sticky'
 import RestoMenu from '@/components/RestoMenu.vue'
 
 export default {
   name: 'home',
   components: {
     RestoMenu
-  }
+  },
+  directives: {
+  'sticky': VueSticky,
+}
 }
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 .resto {
     margin: 0 auto;
     width: 1025px;

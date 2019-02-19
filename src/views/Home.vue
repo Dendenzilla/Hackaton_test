@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 // @ is an alias to /src
 import TypeFood from '@/components/TypeFood.vue'
 import RestoList from '@/components/RestoList.vue'
