@@ -125,6 +125,7 @@ h1 {
   text-align: left;
   margin-bottom: 40px;
   padding-top: 70px;
+  color: deeppink;
 }
 .resto-list {
   display: flex;
