@@ -1,34 +1,31 @@
 <template>
+<div class="fullwidth">
     <div class="container">
         <div class="resto">
             <div class="resto__bloc">
                 <div class="resto__infos">
-                    <h2>Nom resto</h2>
-                    <p>tags</p>
-                    <p>description Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio       nobis  magnam tenetur perferendis, enim facilis voluptates autem quae   exercitationem    voluptatum vel voluptate provident? Voluptate natus illum      nesciunt quae, aut autem?</p>
-                </div>
-                <div class="resto__image">
-                    <img src="@/assets/img/app_store.png" alt="link_app_store">
+                    <h2>Pulcinella</h2>
+                    <p class="tags">Cuisine italienne</p>
+                    <p>Très bonnes pizzas cuites au feu de bois. Le cadre et la déco pourraient être améliorés mais ca vaut largement le déplacement ! Les pizzas sont également à emporter.</p>
                 </div>
             </div>
             <div class="resto__menu" v-sticky="{ zIndex: 10, stickyTop: 0, disabled: false}">
                 <RestoMenu/>
                 <div class="basket">
-                    <div class="order">Passer commande</div>
-                    <div class="selection">Votre panier est vide</div>
+                    <div class="order">Réserver une table</div>
                 </div>
             </div>
             <div class="resto__list">
                 <!-- DEBUT MENU ITEM -->
                 <div class="menu_item">
                     <div class="menu_title">
-                        <h4>Menu Item</h4>
-                        <p>Item short description</p>
+                        <h4>Entrées</h4>
+                        <p>Toutes nos entrées sont servies avec du pain italien bla bla bla</p>
                     </div>
                     <div class="plat_container">
                         <!-- DEBUT LISTE PLATS -->
                         <div class="plat">
-                                <h5>Nom plat</h5>
+                                <h5>tomates séchées</h5>
                                 <p>description</p>
                                 <p>Prix</p>
                         </div>
@@ -127,6 +124,7 @@
             
         </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -145,10 +143,13 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.fullwidth {
+    width: 100vw;
+    background: rgb(238, 238, 238);
+}
 .resto {
     margin: 0 auto;
     width: 1025px;
-    background-color: teal;
     &__image img {
         width: 400px;
     }
@@ -156,18 +157,25 @@ export default {
         display: flex;
     }
     &__infos {
-        text-align-last: left;
+        text-align: left;
+        & h2 {
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+        & .tags {
+            font-size: 12px;
+            color: grey;
+            font-style: italic;
+        }
     }
     &__menu {
         display: flex;
         justify-content: space-between;
-        border:1px solid black;
         position: relative;
     }
 }
 .basket {
     width: 300px;
-    background-color: aquamarine;
     position: absolute;
     top: 0;
     right: 0;
@@ -176,9 +184,10 @@ export default {
     display: flex;
     flex-direction: column;
     width: 340px;
-    background-color: beige;
     margin-bottom: 20px;
     text-align-last: left;
+    background: white;
+    padding: 5px;
     & h5, p {
         margin: 0 0 10px 0;
     }
@@ -193,9 +202,10 @@ export default {
     text-align: left;
 }
 .order {
-    background-color: gray;
+    background: white;
     height: 40px;
     line-height: 40px;
+    cursor:pointer;
 }
 .selection {
     height: 200px;

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header/>
+    <Search/>
     <div id="nav">
       <!-- <router-link to="/">Home</router-link>| -->
       <!-- <router-link to="/about">About</router-link> -->
@@ -11,12 +12,14 @@
 </template>
 <script>
 import Header from "./components/Header.vue";
+import Search from "./components/Search.vue";
 import Footer from "./components/Footer.vue";
 export default {
   name: "app",
   components: {
     Header,
-    Footer
+    Footer,
+    Search
   }
 };
 
@@ -34,6 +37,9 @@ export default {
 }
 body{
   margin: 0;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Roboto", sans-serif; 
 }
 .container{
   max-width: 1050px;
